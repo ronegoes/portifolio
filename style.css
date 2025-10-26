@@ -79,3 +79,21 @@ a.btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.8rem 1.
+/* Botão do servidor */
+.btn.servidor {
+  display: inline-block;
+  background: linear-gradient(135deg, #0078d7, #00a2ff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn.servidor:hover {
+  background: linear-gradient(135deg, #00a2ff, #0078d7);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
