@@ -8,29 +8,80 @@
 </head>
 
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Roneii Gomes" style="max-width:180px; margin-bottom:10px; display:block; margin:auto;">
+  <header class="cabecalho">
+    <img src="logo.png" alt="Logo Roneii Gomes" class="logo">
     <h1>Roneii Gomes</h1>
     <p>Estudante Desenvolvedor & Empreendedor Digital</p>
   </header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="https://wa.me/5565984558815" target="_blank">Contato</a>
+  <nav class="menu">
+    <a href="index.html">🏠 Início</a>
+    <a href="projetos.html">💻 Projetos</a>
+    <a href="https://wa.me/5565984558815" target="_blank">📞 Contato</a>
   </nav>
 
   <section class="sobre">
-    <h2>Sobre mim</h2>
-    <p>Sou Estudante de tecnologia aprendendo a desenvolver software, apaixonado por tecnologia, automação e inovação.
-       Tenho experiência academica com Python, Django, servidores locais e hospedagem segura com VPN.
-       Gosto de transformar ideias em projetos reais e funcionais.</p>
+    <h2>👋 Sobre mim</h2>
+    <p>
+      Sou estudante de tecnologia aprendendo a desenvolver software, apaixonado por inovação e automação. 
+      Tenho experiência acadêmica com <b>Python, Django</b>, servidores locais e hospedagem segura com VPN. 
+      Gosto de transformar ideias em projetos reais e funcionais.
+    </p>
   </section>
 
-  <section class="contato" style="text-align:center;">
-    <h2>Entre em Contato</h2>
-    <p>Quer conhecer mais meus projetos ou colaborar comigo?</p>
-    <a class="btn" href="https://wa.me/5565984558815" target="_blank">💬 Falar no WhatsApp</a>
+  <!-- FOTO PRINCIPAL -->
+  <section class="main-content">
+    <div class="card">
+      <img src="img/eunapiscina6.jpeg" alt="Roneii na piscina" class="foto-perfil">
+      <h3>Esse sou eu</h3>
+      <p>“Desafios são apenas degraus para quem está decidido a chegar mais alto.”</p>
+      <a href="#" class="btn">Conheça-me</a>
+    </div>
+  </section>
+
+  <!-- CONTATOS -->
+  <section class="contato">
+    <h2>📱 Contatos</h2>
+
+    <div class="contato-item">
+      <img src="img/instagram_2111463.png" alt="Instagram" class="icon">
+      <span><a href="https://www.instagram.com/rone_goess?igsh=eGJucXluOGFobTcz">@rone_goes</a></span>
+    </div>
+
+    <div class="contato-item">
+      <img src="img/facebook_2496095.png" alt="Facebook" class="icon">
+      <span><a href="https://www.facebook.com/share/1BxTjT3oaa/">Facebook</a></span>
+    </div>
+
+    <div class="contato-item">
+      <img src="img/images.png" alt="LinkedIn" class="icon">
+      <span><a href="https://www.linkedin.com/in/roneii/">LinkedIn</a></span>
+    </div>
+
+    <div class="contato-item">
+      <img src="img/whatsapp_733585.png" alt="WhatsApp" class="icon">
+      <span></span>
+      <button onclick="abrirWhatsApp()">Enviar via WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- SCRIPT WHATSAPP -->
+  <script>
+    function abrirWhatsApp() {
+      const numero = '5565984558815';
+      const texto = 'Olá, estou entrando em contato pelo seu portfólio!';
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+  <!-- PORTFÓLIO -->
+  <section class="portfolio">
+    <h2>🌐 Portfólio e Certificados</h2>
+    <p>Acesse minha página com certificados, currículo e projetos no GitHub:</p>
+    <a class="btn" href="https://ronegoes.github.io/ronegoes/certificados.html" target="_blank">
+      Acessar minha página
+    </a>
   </section>
 
   <footer>

@@ -1,99 +1,229 @@
-* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;}
-
+/* ===== AJUSTES GERAIS ===== */
 body {
-  background: #f6f8fa;
-  color: #1f2328;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  text-align: center;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho .logo {
+  max-width: 160px;
+  margin-top: 15px;
+}
+
+.menu {
+  background-color: #007BFF;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+.sobre {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
   line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(90deg, #0078ff, #00c2ff);
-  color: lavender;
-  padding: 2.5rem 1rem;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-h1 {font-size: 2.6rem; margin-bottom: 0.5rem;}
-h2 {color: #0078ff; margin-top: 2.5rem; text-align: center;}
-
-nav {
-  background: pink;
+/* ===== CARD PRINCIPAL ===== */
+.main-content {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  border-bottom: 1px solid #e5e5e5;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-nav a {
-  color: #0078ff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #0056b3;
-}
-
-section {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.projetos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  margin: 40px 0;
 }
 
 .card {
-  background: lavender;
-  padding: 1.5rem;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+.card img {
+  width: 80%;            /* 🔹 Foto menor e proporcional */
+  max-width: 300px;      /* 🔹 Limite máximo da largura */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: auto;
+  object-fit: cover;
 }
 
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: #555;
-  border-top: 1px solid #e5e5e5;
-  background: #fdfdfd;
-  margin-top: 3rem;
+/* ===== CONTATO / WHATSAPP ===== */
+.contato {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-top: 2px solid #007BFF;
 }
 
-a.btn {
+.contato-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.whats-icon {
+  width: 35px;  /* 🔹 Ícone menor */
+  height: 35px;
+}
+
+.contato-item button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contato-item button:hover {
+  background-color: #1EBE5D;
+}
+
+/* ===== PORTFÓLIO ===== */
+.portfolio {
+  background-color: #f4f6f8;
+  padding: 40px 20px;
+}
+
+.btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.
-/* Botão do servidor */
-.btn.servidor {
-  display: inline-block;
-  background: linear-gradient(135deg, #0078d7, #00a2ff);
+  background-color: #007BFF;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
 }
 
-.btn.servidor:hover {
-  background: linear-gradient(135deg, #00a2ff, #0078d7);
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+/* ========================= */
+/* 🔹 AJUSTES ESPECÍFICOS PARA projetos.html */
+/* ========================= */
+
+/* Garante que os cards fiquem centralizados e em grade */
+.projetos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.projetos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 20px; /* espaço entre os cards */
+  margin-top: 20px;
+}
+
+/* Cada card de projeto */
+.projetos-grid .card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left; /* conteúdo interno alinhado */
+  padding: 20px;
+  width: 320px;
+  max-width: 90%;
+}
+
+/* Títulos e botões dentro dos cards */
+.projetos-grid .card h3 {
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.projetos-grid .card p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.projetos-grid .btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.projetos-grid .btn:hover {
+  background-color: #0056b3;
+}
+/* ======================== */
+/* 🔹 AJUSTE DAS IMAGENS */
+/* ======================== */
+.foto-perfil {
+  width: 60%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 15px auto;
+  object-fit: cover;
+}
+
+/* Ícones de redes sociais e WhatsApp */
+.icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ======================== */
+/* 🔹 SEÇÃO DE CONTATOS */
+/* ======================== */
+.contato {
+  text-align: center;
+  background-color: #f4f6f8;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.contato-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Botão WhatsApp */
+.contato-item button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contato-item button:hover {
+  background-color: #1ebc59;
 }
